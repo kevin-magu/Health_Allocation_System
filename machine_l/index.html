@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="index.css">  
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Contact</a>
+        <div class="underline"></div>
+    </nav>
+      <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const underline = document.querySelector('.underline');
+      
+        navLinks.forEach(link => {
+          link.addEventListener('mouseover', () => {
+            const linkRect = link.getBoundingClientRect();
+            underline.style.width = `${linkRect.width}px`;
+            underline.style.transform = `translateX(${linkRect.left}px)`;
+          });
+      
+          link.addEventListener('mouseout', () => {
+            underline.style.width = '0';
+          });
+        });
+      </script>
+
+      <div class="page-container">
+        <h2>HEALTH RESOURCE ALLOCATION SYSTEM</h2>
+        <div class="images-container">
+        <div class="images">
+        </div>
+          <div class="cards">
+            <div class="card">
+              <div class="main-content">
+                <div class="header">
+              <span>Prediction System</span>
+             
+            </div>
+            <p class="heading">Integrate Your Facility Here</p>
+            <div class="categories">
+              <span>Predictions</span>
+              <span>Resourse Allocation</span>
+            </div>
+              </div>
+            <div class="footer">
+              <a href="prediction.php"><button class="button type1">
+                View page
+              </button></a>
+              
+              
+            </div>
+            </div>
+            <div class="card">
+              <div class="main-content">
+                <div class="header">
+              <span>Data Visualization</span>
+            </div>
+            <p class="heading">View various data analytics in graphs</p>
+            <div class="categories">
+              <span>Graphs</span>
+              
+            </div>
+              </div>
+            <div class="footer">
+              <a href="#"><button class="button type1">
+                View page
+              </button></a>
+            </div>
+            </div>
+            <div class="card">
+              <div class="main-content">
+                <div class="header">
+              <span>Learn more</span>
+              
+            </div>
+            <p class="heading">Learn more on how the health care industry can be improved using our system.</p>
+            <div class="categories">
+              <span>Scalability</span>
+              <span>Real world impact</span>
+            </div>
+              </div>
+            <div class="footer">
+              <a href="#"><button class="button type1">
+                View page
+              </button></a>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+</body>
+</html>
